@@ -13,17 +13,11 @@
     <%= entry["description"]%>
   </li>
 <% end %>
-<p>
-<a href = "/entries/new"> New post</a>
-</p>
 
 <p>
-  <a href="/entries/new place_id=<%= @place.id %>">New post for <%= @entry.title %></a>
+  <a href="/entries/new?place_id=<%= @place.id %>">New post for <%= @place.name %></a>
 </p>
 
-<p>
-  <a href="/contacts/new?company_id=<%= @company.id %>">New contact for <%= @company.name %></a>
-</p>
 
 <p>
 <a href = "/places/"> Back to ALL places</a>
