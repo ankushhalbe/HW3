@@ -1,10 +1,18 @@
-<h> Places I've been </h>
+<h1> Places I've been </h1>
 
 <ul>
   <li>
   <%= @place["name"]%>
   </li>
 </ul>
+
+<h2> Posts </h2>
+<% for entry in @entry%>
+  <li>
+    <%= entry["title"] %> 
+    <%= entry["description"]%>
+  </li>
+<% end %>
 
 <p>
 <a href = "/places/"> Back to ALL places</a>
