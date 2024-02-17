@@ -19,4 +19,11 @@ class PlacesController < ApplicationController
   redirect_to "/places"
   end
 
+
+  def destroy
+  @place = Place.destroy  
+  @place["name"] = params["name"]
+  @place.save
+  redirect_to "/places"
+  end   
 end 
