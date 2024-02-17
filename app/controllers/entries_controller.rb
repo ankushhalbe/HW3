@@ -2,16 +2,16 @@ class EntriesController < ApplicationController
   def index 
   @entry = Entry.all 
   end 
-end
 
-def new
+  def new
 
-end 
+  end 
 
-def create
+  def create
   @entry = Entry.new
   @entry["title"] = params["title"]
   @entry["description"] = params["description"]
   @entry.save
   redirect_to "/entries"
   end
+end
