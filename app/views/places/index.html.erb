@@ -1,9 +1,9 @@
 <h> Place I've been </h>
 
 <ul>
-  <% for place in @places %>
+  <% for place in @place %>
     <li>
-      <a> href="/places/ <%= place["id"]%>" = place["name"]%></a>
+      <a href="/places/<%= place ["id"] %>"><%= place["name"]%></a>
     </li>
   <% end %>
 </ul>

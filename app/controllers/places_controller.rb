@@ -1,21 +1,22 @@
 class PlacesController < ApplicationController
+
   def index 
-    render :template => "places/index"
-    @places = Places.all
+    @place = Place.all
   end
-end
 
-def show
-   @place = Places.find_by({"id" => params["id"]})
-end
+  def show
+    @place = Place.find_by({"id" => params["id"]})
+  end
 
-def new
+  def new
 
-end
+  end
 
-def create
-@places = Places.new
-@places["name"] = params ["name"]
-@places.save
-redirect_to "/places"
-end
+  def create
+  @place = Place.new
+  @place["name"] = params["name"]
+  @place.save
+  redirect_to "/places"
+  end
+
+end 
